@@ -19,11 +19,11 @@ Installation
 
 To install the extension:
 
-# Clone or download the repository to your computer
-# Open Chrome extensions tab: chrome://extensions/
-# Check the box that says developer mode
-# Click the button for "Load unpacked extension..."
-# Navigate to where you cloned the repository and select the folder for it
+1. Clone or download the repository to your computer
+2. Open Chrome extensions tab: chrome://extensions/
+3. Check the box that says developer mode
+4. Click the button for "Load unpacked extension..."
+5. Navigate to where you cloned the repository and select the folder for it
 
 You should see the extension appear now and an icon in the top right near the menu button.
 
