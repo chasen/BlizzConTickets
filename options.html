@@ -9,19 +9,129 @@ and open the template in the editor.
         <title>BlizzCon Ticket Grabber Settings</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/options.css" type="text/css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
         <script src="js/jquery.js"></script>
-        <script src="js/options.js"></script>
+
     </head>
     <body>
-        <div id="page">
-            <div id="header">
-                <img src="img/icon-48.png" alt="" />
-                <h1>BlizzCon Ticket Grabber</h1>
+        <div class="container">
+                <div class="page-header">
+                    <h1><img src="img/icon-48.png" alt="" /> BlizzCon Ticket Grabber</h1>
+                </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>General Information</h3>
+                    <div class="form-group">
+                        <label for="numTickets">Number of Tickets:</label>
+                        <select name="numTickets" id="numTickets">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="creditCard">Credit Card Number</label>
+                        <input name="creditCard" id="creditCard" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label for="creditCardExp">Expiration</label>
+                                <input name="creditCardExp" id="creditCardExp" type="text" class="form-control" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="creditCardCVV">CVV</label>
+                                <input name="creditCardCVV" id="creditCardCVV" type="text" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="attendee_1">
+                        <h3>Attendee #1</h3>
+                        <div class="form-group hidden" id="use_for_all_wrapper">
+                            <input name="use_for_all" id="use_for_all" type="checkbox" checked />
+                            <label for="use_for_all">Use this info for all other attendees?</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_1_first_name">First Name</label>
+                            <input class="form-control" name="attendee_1_first_name" id="attendee_1_first_name" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_1_last_name">Last Name</label>
+                            <input class="form-control" name="attendee_1_last_name" id="attendee_1_last_name" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_1_email">Email</label>
+                            <input class="form-control" name="attendee_1_email" id="attendee_1_email" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_1_character_name">Character Name</label>
+                            <input class="form-control" name="attendee_1_character_name" id="attendee_1_character_name" type="text" />
+                        </div>
+                    </div>
+                    <div id="attendee_2" class="hidden">
+                        <h3>Attendee #2</h3>
+                        <div class="form-group">
+                            <label for="attendee_2_first_name">First Name</label>
+                            <input class="form-control" name="attendee_2_first_name" id="attendee_2_first_name" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_2_last_name">Last Name</label>
+                            <input class="form-control" name="attendee_2_last_name" id="attendee_2_last_name" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_2_email">Email</label>
+                            <input class="form-control" name="attendee_2_email" id="attendee_2_email" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_2_character_name">Character Name</label>
+                            <input class="form-control" name="attendee_2_character_name" id="attendee_2_character_name" type="text" />
+                        </div>
+                    </div>
+                    <div id="attendee_3" class="hidden">
+                        <h3>Attendee #3</h3>
+                        <div class="form-group">
+                            <label for="attendee_3_first_name">First Name</label>
+                            <input class="form-control" name="attendee_3_first_name" id="attendee_3_first_name" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_3_last_name">Last Name</label>
+                            <input class="form-control" name="attendee_3_last_name" id="attendee_3_last_name" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_3_email">Email</label>
+                            <input class="form-control" name="attendee_3_email" id="attendee_3_email" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_3_character_name">Character Name</label>
+                            <input class="form-control" name="attendee_3_character_name" id="attendee_3_character_name" type="text" />
+                        </div>
+                    </div>
+                    <div id="attendee_4" class="hidden">
+                        <h3>Attendee #4</h3>
+                        <div class="form-group">
+                            <label for="attendee_4_first_name">First Name</label>
+                            <input class="form-control" name="attendee_4_first_name" id="attendee_4_first_name" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_4_last_name">Last Name</label>
+                            <input class="form-control" name="attendee_4_last_name" id="attendee_4_last_name" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_4_email">Email</label>
+                            <input class="form-control" name="attendee_4_email" id="attendee_4_email" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="attendee_4_character_name">Character Name</label>
+                            <input class="form-control" name="attendee_4_character_name" id="attendee_4_character_name" type="text" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button id="save">Save</button>
+                    </div>
+                </div>
             </div>
-            <div>Number of General Admission Tickets: <select name="gen_tix"><option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div>
-            <div>Number of Benefit Dinner Tickets: <select name="ben_tix"><option value="0" selected>0</option><option value="1">1</option><option value="2">2</option></select></div>
-            <button id="save">Save</button>
         </div>
+        <script src="js/options.js"></script>
     </body>
 </html>

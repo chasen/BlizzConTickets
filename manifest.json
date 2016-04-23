@@ -2,31 +2,37 @@
     "manifest_version": 2,
     "name": "BlizzCon Ticket Grabber",
     "description": "Aids in the purchasing of blizzcon tickets",
-    "version": "0.2.0",
-    "permissions": [ 
-        "tabs", 
-        "http://*/*", 
-        "https://*/*"
+    "version": "0.3.0",
+    "permissions": [
+        "tabs",
+        "https://www.universe.com/*",
+        "http://www.universe.com/*"
     ],
     "browser_action": {
         "default_icon": "img/icon-48.png"
     },
     "content_scripts" : [{
-        "matches" : [ "http://www.eventbrite.com/*"],
-        "js" : ["js/eventbrite.js"],
+        "matches" : [
+            "https://www.universe.com/*",
+            "http://www.universe.com/*"
+        ],
+        "js" : ["js/jquery.js","js/app.js"],
         "run_at": "document_end"
     }],
+    "options_page": "options.html",
     "icons": {
         "16":"img/icon-16.png",
         "48":"img/icon-48.png",
         "128":"img/icon-128.png"
     },
-    "background": { 
-        "page": "background.html"
+    "background": {
+        "scripts": ["js/background.js"]
     },
-    "web_accessible_resources": [ 
+    "web_accessible_resources": [
         "js/jquery.js",
-        "js/app.js",
-        "js/improve_load.js"
+        "js/background.js",
+        "js/bootstrap.min.js",
+        "js/app.js"
     ]
 }
+
